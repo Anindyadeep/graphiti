@@ -15,12 +15,26 @@ packages = [{ include = "graphiti_core", from = "." }]
 [tool.poetry.dependencies]
 python = "^3.10"
 pydantic = "^2.8.2"
-neo4j = "^5.23.0"
+neo4j = "5.27.0"
 diskcache = "^5.6.3"
 openai = "^1.53.0"
 tenacity = "^8.2.0" 
 numpy = ">=1.0.0"
 python-dotenv = "^1.0.1"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+pytest-xdist = "^3.6.1"
+ruff = "^0.7.1"
+
+[tool.poetry.group.dev.dependencies]
+pydantic = "^2.8.2"
+mypy = "^1.11.1"
+groq = ">=0.9,<0.12"
+anthropic = ">=0.34.1,<0.36.0"
+diskcache-stubs = "^5.6.3.6.20240818"
 
 [build-system]
 requires = ["poetry-core"]
